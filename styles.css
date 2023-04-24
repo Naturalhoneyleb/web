@@ -141,6 +141,10 @@
         mix-blend-mode: screen;
     }
     
+    #bk3 {
+        mix-blend-mode: screen;
+    }
+    
     .main img {
         position: absolute;
         width: 100%;
@@ -1222,6 +1226,18 @@
         }
         .text-box h1 {
             font-size: 30px;
+        }
+        .main img {
+            position: absolute;
+            width: 100%;
+            height: 60vh;
+            object-fit: inherit;
+        }
+        .main {
+            height: 60vh;
+        }
+        .row {
+            bottom: 45%;
         }
     }
     

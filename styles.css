@@ -1259,6 +1259,12 @@
         .intro {
             padding: 10px 10px 5px 10px;
         }
+        .intro p {
+            margin-left: 0px;
+        }
+        .news p {
+            margin-left: 0px;
+        }
     }
     
     @media(max-width: 767px) {

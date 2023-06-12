@@ -810,7 +810,7 @@
     }
     
     .accordion-faq h5 {
-        font-size: 22px;
+        font-size: 18px;
         margin: 0;
         padding: 3px 0 0 0;
         font-weight: normal;
@@ -1140,6 +1140,11 @@
         cursor: pointer;
         transition: .5s;
     }
+    
+    .details-product a:hover {
+        color: #24262b;
+        background-color: #fff;
+    }
     /*end contnet products*/
     
     @media(max-width: 767px) {
@@ -1238,6 +1243,9 @@
         }
         .row {
             bottom: 45%;
+        }
+        .page-title {
+            display: none;
         }
     }
     

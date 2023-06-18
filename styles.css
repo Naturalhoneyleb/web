@@ -610,7 +610,7 @@
                 padding: 9px 9px 9px 9px;
                 font-size: 18px;
                 outline: none;
-                border: 2px solid #fff;
+                border: 2px solid transparent;
             }
             
             .nletter-content .nl-input .ic-nl {
@@ -666,6 +666,7 @@
                 align-items: center;
                 justify-content: center;
                 margin-top: 5px;
+                font-size: 14px;
             }
             /*news_letter section end */
             /*footer start*/

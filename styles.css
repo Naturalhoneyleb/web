@@ -385,11 +385,49 @@
             .news p {
                 margin-left: 15px;
             }
+            /*in breif section*/
+            
+            .breif {
+                color: #fff;
+                padding: 25px 0px 0 150px;
+            }
+            
+            .breif-content {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                margin-left: 25px;
+            }
+            
+            .breif h2 {
+                margin-bottom: 15px;
+                font-size: 30px;
+                position: relative;
+            }
+            
+            .breif h2:hover {
+                color: #fff;
+                padding-left: 8px;
+                transition: all 0.3s ease;
+            }
+            
+            .breif h2::before {
+                content: '';
+                margin-left: 30px;
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                background-color: #e91e63;
+                height: 2px;
+                box-sizing: border-box;
+                width: 105px;
+            }
+            /*in breif section end */
             /*carousal benefits start*/
             
             .benefits {
                 color: #fff;
-                padding: 25px 150px 30px 150px;
+                padding: 25px 0px 0px 150px;
             }
             
             .benefits h2 {
@@ -510,6 +548,126 @@
                 background: #40d3dc;
             }
             /*carousal benefits end*/
+            /*news_letter section*/
+            
+            .nletter {
+                color: #fff;
+                padding: 25px 0px 25px 150px;
+            }
+            
+            .nletter h2 {
+                margin-bottom: 15px;
+                font-size: 30px;
+                position: relative;
+            }
+            
+            .nletter h2:hover {
+                color: #fff;
+                padding-left: 8px;
+                transition: all 0.3s ease;
+            }
+            
+            .nletter h2::before {
+                content: '';
+                margin-left: 30px;
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                background-color: #e91e63;
+                height: 2px;
+                box-sizing: border-box;
+                width: 160px;
+            }
+            
+            .nletter-content {
+                position: relative;
+            }
+            
+            .nletter-content h3 {
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+            
+            .nletter-content p {
+                margin-left: 60px;
+                margin-top: 5px;
+                margin-bottom: 30px;
+                font-size: 18px;
+            }
+            
+            .nletter-content .nl-input {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .nletter-content .nl-input input {
+                height: 100%;
+                width: 240px;
+                padding: 9px 9px 9px 9px;
+                font-size: 18px;
+                outline: none;
+                border: 2px solid #fff;
+            }
+            
+            .nletter-content .nl-input .ic-nl {
+                position: relative;
+                color: #000;
+                font-size: 22px;
+                background: #fff;
+                display: inline-block;
+                height: 44px;
+                width: 33px;
+                border-bottom-left-radius: 22px;
+                border-top-left-radius: 22px;
+                text-align: center;
+            }
+            
+            .nletter-content .nl-input .ic-nl i {
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+            
+            .nletter-content .nl-input .btn-nl {
+                position: relative;
+                background: #fff;
+                text-align: center;
+                display: inline-block;
+                height: 44px;
+                width: 100px;
+                border-bottom-right-radius: 22px;
+                border-top-right-radius: 22px;
+            }
+            
+            .nletter-content .nl-input .btn-nl button {
+                position: relative;
+                padding: 8px 12px;
+                cursor: pointer;
+                border-radius: 50px;
+                border: none;
+                outline: none;
+                background: #286aeb;
+                color: white;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            
+            .nletter-content .nl-input button:hover {
+                background: #000;
+                color: #fff;
+            }
+            
+            .nletter-content span {
+                color: #61b752;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5px;
+            }
+            /*news_letter section end */
             /*footer start*/
             
             .footer {
@@ -573,7 +731,7 @@
             
             .footer-col ul li a:hover {
                 color: #fff;
-                padding-left: 8px;
+                padding-left: 8pxsocial;
             }
             
             .footer-col .social-links a {
@@ -1146,6 +1304,8 @@
                 background-color: #fff;
             }
             /*end contnet products*/
+            /*start contnet media center*/
+            /*end contnet media center*/
             
             @media(max-width: 767px) {
                 .footer-col {
@@ -1217,6 +1377,12 @@
                     justify-content: center;
                     margin-top: 280px;
                 }
+                .nletter {
+                    padding: 10px 10px 5px 10px;
+                }
+                .breif {
+                    padding: 10px 10px 5px 10px;
+                }
             }
             
             @media(max-width: 574px) {
@@ -1261,6 +1427,12 @@
             @media(max-width: 574px) {
                 .intro {
                     padding: 10px 10px 5px 10px;
+                }
+                .nletter-content h3 {
+                    margin-left: 5px;
+                }
+                .nletter-content p {
+                    margin-left: 8px;
                 }
                 .intro p {
                     margin-left: 0px;

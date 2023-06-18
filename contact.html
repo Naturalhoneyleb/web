@@ -47,7 +47,7 @@
     <section class="contact">
         <div class="content">
             <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, totam ratione consectetur sequi voluptates reprehenderit?</p>
+            <p>We would be very happy when contacting us. Please do not hesitate to send any email or feedback about our products or our services.</p>
         </div>
         <div class="container-cnt">
             <div class="contactInfo">
@@ -77,22 +77,22 @@
                 </div>
             </div>
             <div class="contactform">
-                <form>
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <h2>Send Message</h2>
                     <div class="inputbox-cnt">
-                        <input type="text" name="" required="required">
+                        <input id="name" type="text" name="" required="required">
                         <span>Full Name</span>
                     </div>
                     <div class="inputbox-cnt">
-                        <input type="text" name="" required="required">
+                        <input id="email" type="text" name="" required="required">
                         <span>Email</span>
                     </div>
                     <div class="inputbox-cnt">
-                        <textarea required="required"></textarea>
+                        <textarea id="message" required="required"></textarea>
                         <span>Type your Message...</span>
                     </div>
                     <div class="inputbox-cnt">
-                        <input type="submit" name="" value="Send">
+                        <button type="submit">Send</button>
                     </div>
                 </form>
             </div>
@@ -147,4 +147,24 @@
             <p>Copyright &copy;2022 natural honey of lebanon. all rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "natural.honey.leb@gmail.com",
+                Password: "E6ECD922B8651819CDF1F8B89A214984C2F2",
+                To: 'natural.honey.leb@gmail.com',
+                From: 'natural.honey.leb@gmail.com',
+                Subject: "New contact From Web",
+                Body: "Name: " + document.getElementById("name").value +
+                    "<br> Email: " + document.getElementById("email").value +
+                    "<br> Email: " + document.getElementById("message").value
+
+            }).then(
+                message => alert("Message has been sent. Thank you for contacting us")
+            );
+        }
+    </script>
 </body>

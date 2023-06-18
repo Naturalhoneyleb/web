@@ -171,12 +171,14 @@
             <div>
                 <h3>Subscribe to our Newsletter</h3>
                 <p>For more details and news enter your email address to keep in touch.</p>
-                <div class="nl-input">
-                    <div class="ic-nl"><i class="icon fa fa-envelope"></i></div>
-                    <input type="email" name="Email" placeholder="Enter your E-mail Address" required>
-                    <div class="btn-nl"><button type="submit">Subscribe</button></div>
-                </div>
-                <span>Thank You For Subscribing!!</span>
+                <form name="submit-to-google-sheet">
+                    <div class="nl-input">
+                        <div class="ic-nl"><i class="icon fa fa-envelope"></i></div>
+                        <input type="email" name="Email" placeholder="Enter your E-mail Address" required>
+                        <div class="btn-nl"><button type="submit">Subscribe</button></div>
+                    </div>
+                    <span id="msg"></span>
+                </form>
             </div>
         </div>
     </section>
@@ -240,6 +242,28 @@
             <p>Copyright &copy;2022 natural honey of lebanon. all rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-vIYJb7x8I2y6WvOnDPTa_zuA19_HavdL0LtiZqPAFf8-Liu26Da7letd2Ff02gc1Hg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    msg.innerHTML = "Thank You For Subscribing!!"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>

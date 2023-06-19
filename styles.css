@@ -386,6 +386,12 @@
             .news p {
                 margin-left: 15px;
             }
+            /*.news-parameter {
+                background: #333;
+                color: #000;
+                border-radius: 40px;
+                border: 1px solid#d0f111;
+            }*/
             /*in breif section*/
             
             .breif {
@@ -597,6 +603,7 @@
                 margin-top: 5px;
                 margin-bottom: 30px;
                 font-size: 18px;
+                font-style: italic;
             }
             
             .nletter-content .nl-input {
@@ -942,6 +949,36 @@
                 margin-bottom: 25px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+            
+            .container-fluid-prdben {
+                width: 40%;
+                margin: 0 auto;
+                margin-top: 100px;
+                color: #fff;
+                margin-bottom: 50px;
+            }
+            
+            .container-fluid-prdben h2 {
+                color: #fff;
+                position: relative;
+                width: 28rem;
+                font-weight: bold;
+                align-items: center;
+                padding-bottom: 5px;
+                margin-bottom: 25px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .container-fluid-prdben h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 250px;
+                width: 90px;
+                height: 2px;
+                background-color: #e91e63;
             }
             
             .container-fluid-faq h2::after {

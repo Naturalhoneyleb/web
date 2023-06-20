@@ -386,12 +386,68 @@
             .news p {
                 margin-left: 15px;
             }
-            /*.news-parameter {
-                background: #333;
+            /*new glow*/
+            
+            .news-parameter {
+                background: #ffffffc9;
                 color: #000;
-                border-radius: 40px;
-                border: 1px solid#d0f111;
-            }*/
+            }
+            
+            .news-parameter {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #000;
+                border-radius: 25px;
+            }
+            
+            .news-parameter:before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                background: #fff;
+                z-index: -1;
+                border-radius: 25px;
+            }
+            
+            .news-parameter:after {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                bottom: -2px;
+                background: #fff;
+                right: -2px;
+                z-index: -2;
+                filter: blur(20px);
+                border-radius: 25px;
+            }
+            
+            .news-parameter:nth-child(2):before,
+            .news-parameter:nth-child(2):after {
+                background: linear-gradient(120deg, #ffffff, #010615, #5c00d4)
+            }
+            
+            .news-parameter .glass {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                display: block;
+                background: rgba(255, 255, 255, 0.1);
+                pointer-events: none;
+                border-radius: 25px;
+            }
+            
+            .news-parameter .news-cont {
+                padding: 20px;
+                color: #fff;
+            }
             /*in breif section*/
             
             .breif {
